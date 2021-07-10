@@ -26,18 +26,17 @@ Welcome to the Use-Turtlebot3-with-SLAMTurtlebot3-with-SLAM-approach-to-create-a
 
 *$ cd ~/catkin_ws && catkin_make
   
-### Run burger model in GAZEBO simulator
+### Run burger model in GAZEBO simulator as gazebomap.png
 * $ export TURTLEBOT3_MODEL=burger
 * $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
-### To move the model with keyboard use this command :
+### To move the model with keyboard as map_keyboard.png using this command:
 * $export TURTLEBOT3_MODEL=burger
 * roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
  ## To create  using slam and save map as map.pgm file 
 1. open GAZEBO as previous step 
 1.  Create a map using SLAM
-* $roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
-1.  Run the turtlebot3 by  Opening  a new terminal and run the teleoperation node 
-
+* $roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping **Simulation RVIZ will work as initial map.png**
+1.  Run the turtlebot3 using keyboard as map_keyboard.png by  Opening  a new terminal and run the teleoperation node 
 * $export TURTLEBOT3_MODEL=burger
 *$roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 *  **Finally**  save the  map  by create **a new terminal** and write this command :
